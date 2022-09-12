@@ -1,3 +1,94 @@
-2022-09-12 22:18:22,390  * Debugger is active!
-2022-09-12 22:18:22,405  * Debugger PIN: 488-624-636
-2022-09-12 22:18:22,459  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-09-12 22:30:49,976  * Debugger is active!
+2022-09-12 22:30:49,984  * Debugger PIN: 488-624-636
+2022-09-12 22:30:50,041  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-09-12 22:30:51,246 -----------route -fetch data from db---------------------
+2022-09-12 22:30:51,246 finished regex search, matched: (?:\/(c)\/([%\d\w_\-]+)(\/.*)?)
+2022-09-12 22:30:51,918 Ste1-- Completed here
+2022-09-12 22:30:53,250 Basic info data collected from mysql ..... Proceed to html table text creation
+2022-09-12 22:30:53,250 HTML table text for created for basic info data
+2022-09-12 22:30:53,250 Ste2-- Completed here
+2022-09-12 22:30:53,347 data collected from mongo db
+2022-09-12 22:30:53,453 Peer did not staple an OCSP response
+2022-09-12 22:30:53,453 Peer did not staple an OCSP response
+2022-09-12 22:30:53,453 Requesting OCSP data
+2022-09-12 22:30:53,453 Requesting OCSP data
+2022-09-12 22:30:53,453 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,453 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,528 Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-09-12 22:30:53,538 Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-09-12 22:30:53,538 Peer did not staple an OCSP response
+2022-09-12 22:30:53,538 Requesting OCSP data
+2022-09-12 22:30:53,538 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,543 Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-09-12 22:30:53,613 Verifying response
+2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-09-12 22:30:53,613 Verifying response
+2022-09-12 22:30:53,613 Verifying response
+2022-09-12 22:30:53,613 Responder is issuer
+2022-09-12 22:30:53,613 Responder is issuer
+2022-09-12 22:30:53,613 Responder is issuer
+2022-09-12 22:30:53,624 Caching OCSP response.
+2022-09-12 22:30:53,624 Caching OCSP response.
+2022-09-12 22:30:53,624 Caching OCSP response.
+2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,890 Peer did not staple an OCSP response
+2022-09-12 22:30:53,890 Requesting OCSP data
+2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,890 Using cached OCSP response.
+2022-09-12 22:30:53,890 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,890 Peer did not staple an OCSP response
+2022-09-12 22:30:53,890 Requesting OCSP data
+2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,890 Using cached OCSP response.
+2022-09-12 22:30:53,890 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,890 Peer did not staple an OCSP response
+2022-09-12 22:30:53,890 Requesting OCSP data
+2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,901 Using cached OCSP response.
+2022-09-12 22:30:53,901 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:53,901 Peer did not staple an OCSP response
+2022-09-12 22:30:53,901 Requesting OCSP data
+2022-09-12 22:30:53,901 Trying http://r3.o.lencr.org
+2022-09-12 22:30:53,901 Using cached OCSP response.
+2022-09-12 22:30:53,901 OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-09-12 22:30:54,505 HTML text for comment table created
+2022-09-12 22:30:54,505 Ste3-- Completed here
+2022-09-12 22:30:54,505 zipfolder created
+2022-09-12 22:30:54,509 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:54,722 https://i.ytimg.com:443 "GET /vi/fe9Zwpi90Cg/hqdefault.jpg HTTP/1.1" 200 6380
+2022-09-12 22:30:54,738 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:54,932 https://i.ytimg.com:443 "GET /vi/-hlP2mLIbaE/hqdefault.jpg HTTP/1.1" 200 8627
+2022-09-12 22:30:54,942 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:55,173 https://i.ytimg.com:443 "GET /vi/zXgxCA7BpDw/hqdefault.jpg HTTP/1.1" 200 11785
+2022-09-12 22:30:55,183 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:55,420 https://i.ytimg.com:443 "GET /vi/2SOqY2Ig9cI/hqdefault.jpg HTTP/1.1" 200 12848
+2022-09-12 22:30:55,436 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:55,687 https://i.ytimg.com:443 "GET /vi/9n28hwXUGmw/hqdefault.jpg HTTP/1.1" 200 41738
+2022-09-12 22:30:55,750 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:55,971 https://i.ytimg.com:443 "GET /vi/3etoX3ihyK4/hqdefault.jpg HTTP/1.1" 200 26749
+2022-09-12 22:30:56,039 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:56,253 https://i.ytimg.com:443 "GET /vi/LiAr2tBH_O8/hqdefault.jpg HTTP/1.1" 200 10367
+2022-09-12 22:30:56,284 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:56,552 https://i.ytimg.com:443 "GET /vi/PJYPpG2Wcx0/hqdefault.jpg HTTP/1.1" 200 26791
+2022-09-12 22:30:56,631 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:56,868 https://i.ytimg.com:443 "GET /vi/4v6176xv0X8/hqdefault.jpg HTTP/1.1" 200 24413
+2022-09-12 22:30:56,916 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:57,105 https://i.ytimg.com:443 "GET /vi/aJhSG3Z5BUY/hqdefault.jpg HTTP/1.1" 200 16719
+2022-09-12 22:30:57,134 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:57,381 https://i.ytimg.com:443 "GET /vi/PTvT3LkHTRk/hqdefault.jpg HTTP/1.1" 200 25374
+2022-09-12 22:30:57,427 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:57,713 https://i.ytimg.com:443 "GET /vi/cSpxhaYaQv8/hqdefault.jpg HTTP/1.1" 200 24750
+2022-09-12 22:30:57,776 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:58,105 https://i.ytimg.com:443 "GET /vi/fJCEHg7S8XA/hqdefault.jpg HTTP/1.1" 200 26791
+2022-09-12 22:30:58,184 Starting new HTTPS connection (1): i.ytimg.com:443
+2022-09-12 22:30:58,419 https://i.ytimg.com:443 "GET /vi/P5VTRe5lxP4/hqdefault.jpg HTTP/1.1" 200 25945
+2022-09-12 22:30:58,451 zipfolder created
+2022-09-12 22:30:58,451 Ste4-- Completed here
+2022-09-12 22:30:58,451 127.0.0.1 - - [12/Sep/2022 22:30:58] "[37mGET /fetch_dataFromDb?channel_name=https%3A%2F%2Fwww.youtube.com%2Fc%2Fsudhanshukumarall HTTP/1.1[0m" 200 -

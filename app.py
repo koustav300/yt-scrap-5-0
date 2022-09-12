@@ -255,21 +255,20 @@ def fetchDataFromDb():
 
             # img content
             img = requests.get(img_url).content
-            print(img)
+
             # image file write & close
-
             fileName= 'image' + vdo_id + '.jpg'
-            fpath= os.path.join(app.config['IMAGE_FOLDER'],fileName)
-            print(os.path.join(app.config['IMAGE_FOLDER'],fileName) )
-            f = open(fpath, 'wb')
-
+            #f = open(os.path.join( app.config['IMAGE_FOLDER'],fileName), 'wb')
+            f = open(fileName, 'wb')
             f.write(img)
             f.close()
             # updating the zip
-            zipfolder.write(os.path.join(app.config['IMAGE_FOLDER'], fileName))
+            # zipfolder.write(os.path.join(app.config['IMAGE_FOLDER'], fileName))
+            zipfolder.write(fileName)
             print('zip written')
             # removing the file
             # os.remove(os.path.join(app.config['IMAGE_FOLDER'], fileName))
+            os.remove(fileName)
         zipfolder.close()
         logger.debug('zipfolder created')
         print('zip created')
