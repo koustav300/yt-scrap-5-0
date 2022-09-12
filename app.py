@@ -22,9 +22,9 @@ global logger
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-@app.before_first_request
-def execute_this():
-    threading.Thread(target=thread_testy).start()
+# @app.before_first_request
+# def execute_this():
+#     threading.Thread(target=thread_testy).start()
 
 # Create and configure logger
 logging.basicConfig(filename="newfile.log",
