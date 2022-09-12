@@ -358,6 +358,7 @@ def upload_VDO_ToS3():
         try:
             s3.upload_file(local_file, bucket, s3_file)
             logger.debug('uploaded to AWS Successful')
+            os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return 'uploaded to AWS Successful'
         except FileNotFoundError:
             logger.error("The file was not found")
@@ -374,7 +375,7 @@ def upload_VDO_ToS3():
         return resp
 
     files = request.files.getlist('files[]')
-
+    print(files)
     errors = {}
     success = False
 
@@ -382,11 +383,13 @@ def upload_VDO_ToS3():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             savePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            print(2)
             file.save(savePath)
-
+            print(3)
             success = True
             # Loading files to AWS
             uploaded = upload_to_aws(savePath, bucket_name, filename)
+            print(4)
         else:
             errors[file.filename] = 'File type is not allowed'
 

@@ -1,94 +1,146 @@
-2022-09-12 22:30:49,976  * Debugger is active!
-2022-09-12 22:30:49,984  * Debugger PIN: 488-624-636
-2022-09-12 22:30:50,041  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2022-09-12 22:30:51,246 -----------route -fetch data from db---------------------
-2022-09-12 22:30:51,246 finished regex search, matched: (?:\/(c)\/([%\d\w_\-]+)(\/.*)?)
-2022-09-12 22:30:51,918 Ste1-- Completed here
-2022-09-12 22:30:53,250 Basic info data collected from mysql ..... Proceed to html table text creation
-2022-09-12 22:30:53,250 HTML table text for created for basic info data
-2022-09-12 22:30:53,250 Ste2-- Completed here
-2022-09-12 22:30:53,347 data collected from mongo db
-2022-09-12 22:30:53,453 Peer did not staple an OCSP response
-2022-09-12 22:30:53,453 Peer did not staple an OCSP response
-2022-09-12 22:30:53,453 Requesting OCSP data
-2022-09-12 22:30:53,453 Requesting OCSP data
-2022-09-12 22:30:53,453 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,453 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,528 Starting new HTTP connection (1): r3.o.lencr.org:80
-2022-09-12 22:30:53,538 Starting new HTTP connection (1): r3.o.lencr.org:80
-2022-09-12 22:30:53,538 Peer did not staple an OCSP response
-2022-09-12 22:30:53,538 Requesting OCSP data
-2022-09-12 22:30:53,538 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,543 Starting new HTTP connection (1): r3.o.lencr.org:80
-2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
-2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
-2022-09-12 22:30:53,608 http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
-2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
-2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
-2022-09-12 22:30:53,613 Verifying response
-2022-09-12 22:30:53,613 OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
-2022-09-12 22:30:53,613 Verifying response
-2022-09-12 22:30:53,613 Verifying response
-2022-09-12 22:30:53,613 Responder is issuer
-2022-09-12 22:30:53,613 Responder is issuer
-2022-09-12 22:30:53,613 Responder is issuer
-2022-09-12 22:30:53,624 Caching OCSP response.
-2022-09-12 22:30:53,624 Caching OCSP response.
-2022-09-12 22:30:53,624 Caching OCSP response.
-2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,624 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,890 Peer did not staple an OCSP response
-2022-09-12 22:30:53,890 Requesting OCSP data
-2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,890 Using cached OCSP response.
-2022-09-12 22:30:53,890 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,890 Peer did not staple an OCSP response
-2022-09-12 22:30:53,890 Requesting OCSP data
-2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,890 Using cached OCSP response.
-2022-09-12 22:30:53,890 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,890 Peer did not staple an OCSP response
-2022-09-12 22:30:53,890 Requesting OCSP data
-2022-09-12 22:30:53,890 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,901 Using cached OCSP response.
-2022-09-12 22:30:53,901 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:53,901 Peer did not staple an OCSP response
-2022-09-12 22:30:53,901 Requesting OCSP data
-2022-09-12 22:30:53,901 Trying http://r3.o.lencr.org
-2022-09-12 22:30:53,901 Using cached OCSP response.
-2022-09-12 22:30:53,901 OCSP cert status: <OCSPCertStatus.GOOD: 0>
-2022-09-12 22:30:54,505 HTML text for comment table created
-2022-09-12 22:30:54,505 Ste3-- Completed here
-2022-09-12 22:30:54,505 zipfolder created
-2022-09-12 22:30:54,509 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:54,722 https://i.ytimg.com:443 "GET /vi/fe9Zwpi90Cg/hqdefault.jpg HTTP/1.1" 200 6380
-2022-09-12 22:30:54,738 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:54,932 https://i.ytimg.com:443 "GET /vi/-hlP2mLIbaE/hqdefault.jpg HTTP/1.1" 200 8627
-2022-09-12 22:30:54,942 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:55,173 https://i.ytimg.com:443 "GET /vi/zXgxCA7BpDw/hqdefault.jpg HTTP/1.1" 200 11785
-2022-09-12 22:30:55,183 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:55,420 https://i.ytimg.com:443 "GET /vi/2SOqY2Ig9cI/hqdefault.jpg HTTP/1.1" 200 12848
-2022-09-12 22:30:55,436 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:55,687 https://i.ytimg.com:443 "GET /vi/9n28hwXUGmw/hqdefault.jpg HTTP/1.1" 200 41738
-2022-09-12 22:30:55,750 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:55,971 https://i.ytimg.com:443 "GET /vi/3etoX3ihyK4/hqdefault.jpg HTTP/1.1" 200 26749
-2022-09-12 22:30:56,039 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:56,253 https://i.ytimg.com:443 "GET /vi/LiAr2tBH_O8/hqdefault.jpg HTTP/1.1" 200 10367
-2022-09-12 22:30:56,284 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:56,552 https://i.ytimg.com:443 "GET /vi/PJYPpG2Wcx0/hqdefault.jpg HTTP/1.1" 200 26791
-2022-09-12 22:30:56,631 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:56,868 https://i.ytimg.com:443 "GET /vi/4v6176xv0X8/hqdefault.jpg HTTP/1.1" 200 24413
-2022-09-12 22:30:56,916 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:57,105 https://i.ytimg.com:443 "GET /vi/aJhSG3Z5BUY/hqdefault.jpg HTTP/1.1" 200 16719
-2022-09-12 22:30:57,134 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:57,381 https://i.ytimg.com:443 "GET /vi/PTvT3LkHTRk/hqdefault.jpg HTTP/1.1" 200 25374
-2022-09-12 22:30:57,427 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:57,713 https://i.ytimg.com:443 "GET /vi/cSpxhaYaQv8/hqdefault.jpg HTTP/1.1" 200 24750
-2022-09-12 22:30:57,776 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:58,105 https://i.ytimg.com:443 "GET /vi/fJCEHg7S8XA/hqdefault.jpg HTTP/1.1" 200 26791
-2022-09-12 22:30:58,184 Starting new HTTPS connection (1): i.ytimg.com:443
-2022-09-12 22:30:58,419 https://i.ytimg.com:443 "GET /vi/P5VTRe5lxP4/hqdefault.jpg HTTP/1.1" 200 25945
-2022-09-12 22:30:58,451 zipfolder created
-2022-09-12 22:30:58,451 Ste4-- Completed here
-2022-09-12 22:30:58,451 127.0.0.1 - - [12/Sep/2022 22:30:58] "[37mGET /fetch_dataFromDb?channel_name=https%3A%2F%2Fwww.youtube.com%2Fc%2Fsudhanshukumarall HTTP/1.1[0m" 200 -
+2022-09-12 23:05:09,004  * Debugger is active!
+2022-09-12 23:05:09,019  * Debugger PIN: 488-624-636
+2022-09-12 23:05:09,066  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-09-12 23:05:49,491 Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2022-09-12 23:05:49,499 Changing event name from before-call.apigateway to before-call.api-gateway
+2022-09-12 23:05:49,499 Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2022-09-12 23:05:49,499 Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2022-09-12 23:05:49,499 Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2022-09-12 23:05:49,499 Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2022-09-12 23:05:49,499 Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2022-09-12 23:05:49,514 Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2022-09-12 23:05:49,514 Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2022-09-12 23:05:49,514 Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2022-09-12 23:05:49,514 Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2022-09-12 23:05:49,530 IMDS ENDPOINT: http://169.254.169.254/
+2022-09-12 23:05:49,530 Looking for credentials via: env
+2022-09-12 23:05:49,530 Looking for credentials via: assume-role
+2022-09-12 23:05:49,530 Looking for credentials via: assume-role-with-web-identity
+2022-09-12 23:05:49,530 Looking for credentials via: sso
+2022-09-12 23:05:49,530 Looking for credentials via: shared-credentials-file
+2022-09-12 23:05:49,530 Found credentials in shared credentials file: ~/.aws/credentials
+2022-09-12 23:05:49,546 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\endpoints.json
+2022-09-12 23:05:49,624 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\sdk-default-configuration.json
+2022-09-12 23:05:49,624 Event choose-service-name: calling handler <function handle_service_name_alias at 0x000002DEB4E48310>
+2022-09-12 23:05:49,733 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\s3\2006-03-01\service-2.json
+2022-09-12 23:05:49,765 Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x000002DEB4DCAE50>
+2022-09-12 23:05:49,765 Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x000002DEB5253040>
+2022-09-12 23:05:49,811 Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x000002DEB4DCAC10>
+2022-09-12 23:05:49,811 Setting s3 timeout as (60, 60)
+2022-09-12 23:05:49,811 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\_retry.json
+2022-09-12 23:05:49,811 Registering retry handlers for service: s3
+2022-09-12 23:05:50,015 Acquiring 0
+2022-09-12 23:05:50,015 UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002DEB595E2B0>}) about to wait for the following futures []
+2022-09-12 23:05:50,015 UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002DEB595E2B0>}) done waiting for dependent futures
+2022-09-12 23:05:50,015 Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002DEB595E2B0>}) with kwargs {'client': <botocore.client.S3 object at 0x000002DEB5B69F70>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002DEB592BAF0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002DEB592BA60>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002DEB592BDC0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002DEB595E2B0>}
+2022-09-12 23:05:50,015 Submitting task PutObjectTask(transfer_id=0, {'bucket': 'yt-vdo-uploaded', 'key': 'vdo1.3gpp', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002DEB592BDC0> for transfer request: 0.
+2022-09-12 23:05:50,015 Acquiring 0
+2022-09-12 23:05:50,015 PutObjectTask(transfer_id=0, {'bucket': 'yt-vdo-uploaded', 'key': 'vdo1.3gpp', 'extra_args': {}}) about to wait for the following futures []
+2022-09-12 23:05:50,015 Releasing acquire 0/None
+2022-09-12 23:05:50,015 PutObjectTask(transfer_id=0, {'bucket': 'yt-vdo-uploaded', 'key': 'vdo1.3gpp', 'extra_args': {}}) done waiting for dependent futures
+2022-09-12 23:05:50,015 Executing task PutObjectTask(transfer_id=0, {'bucket': 'yt-vdo-uploaded', 'key': 'vdo1.3gpp', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002DEB5B69F70>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000002DEB595E850>, 'bucket': 'yt-vdo-uploaded', 'key': 'vdo1.3gpp', 'extra_args': {}}
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000002DEB4E678B0>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000002DEB4E60CA0>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000002DEB4E661F0>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000002DEB4E60C10>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000002DEB592B820>>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000002DEB592B8B0>>
+2022-09-12 23:05:50,015 Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000002DEB4E60A60>
+2022-09-12 23:05:50,015 Event before-call.s3.PutObject: calling handler <function conditionally_calculate_md5 at 0x000002DEB4D301F0>
+2022-09-12 23:05:50,030 Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000002DEB4E60F70>
+2022-09-12 23:05:50,030 Adding expect 100 continue header to request.
+2022-09-12 23:05:50,030 Event before-call.s3.PutObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000002DEB592B820>>
+2022-09-12 23:05:50,030 Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000002DEB4E60700>
+2022-09-12 23:05:50,030 Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000002DEB4E66310>
+2022-09-12 23:05:50,030 Making request for OperationModel(name=PutObject) with params: {'url_path': '/yt-vdo-uploaded/vdo1.3gpp', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.21.32 Python/3.9.12 Windows/10 Botocore/1.27.68', 'Content-MD5': 'wPVHJiuv06HdvV5e0o85fg==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x000002DEB595E850>, 'url': 'https://s3.us-west-2.amazonaws.com/yt-vdo-uploaded/vdo1.3gpp', 'context': {'client_region': 'us-west-2', 'client_config': <botocore.config.Config object at 0x000002DEB5810370>, 'has_streaming_input': True, 'auth_type': None, 'signing': {'bucket': 'yt-vdo-uploaded'}}}
+2022-09-12 23:05:50,030 Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000002DEB58B28B0>
+2022-09-12 23:05:50,030 Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002DEB58103A0>>
+2022-09-12 23:05:50,030 Event choose-signer.s3.PutObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000002DEB592B910>>
+2022-09-12 23:05:50,030 Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002DEB535EC70>>
+2022-09-12 23:05:50,030 Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000002DEB4E60940>
+2022-09-12 23:05:50,030 Event before-sign.s3.PutObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000002DEB592B910>>
+2022-09-12 23:05:50,030 Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2022-09-12 23:05:50,030 Checking for DNS compatible bucket for: https://s3.us-west-2.amazonaws.com/yt-vdo-uploaded/vdo1.3gpp
+2022-09-12 23:05:50,030 URI updated to: https://yt-vdo-uploaded.s3.us-west-2.amazonaws.com/vdo1.3gpp
+2022-09-12 23:05:50,030 Calculating signature using v4 auth.
+2022-09-12 23:05:50,030 CanonicalRequest:
+PUT
+/vdo1.3gpp
+
+content-md5:wPVHJiuv06HdvV5e0o85fg==
+host:yt-vdo-uploaded.s3.us-west-2.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20220912T173550Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2022-09-12 23:05:50,030 StringToSign:
+AWS4-HMAC-SHA256
+20220912T173550Z
+20220912/us-west-2/s3/aws4_request
+1fb3dd63ba3c73f1ac1afe69e875846cb749172f83d7f8f15b1393d4f3c098d8
+2022-09-12 23:05:50,030 Signature:
+c42a226c134faab7e972a0f16d9ccaedf1d2ecd8ac41c0f3f1783d854ae7d8c4
+2022-09-12 23:05:50,030 Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000002DEB58B2940>
+2022-09-12 23:05:50,030 Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000002DEB4E669D0>
+2022-09-12 23:05:50,030 Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://yt-vdo-uploaded.s3.us-west-2.amazonaws.com/vdo1.3gpp, headers={'User-Agent': b'Boto3/1.21.32 Python/3.9.12 Windows/10 Botocore/1.27.68', 'Content-MD5': b'wPVHJiuv06HdvV5e0o85fg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20220912T173550Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWSUI6VONAYACYGXL/20220912/us-west-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=c42a226c134faab7e972a0f16d9ccaedf1d2ecd8ac41c0f3f1783d854ae7d8c4', 'amz-sdk-invocation-id': b'8cd1187a-6b9e-4bbd-985a-b1160a62ebeb', 'amz-sdk-request': b'attempt=1', 'Content-Length': '3481099'}>
+2022-09-12 23:05:50,030 Certificate path: C:\Users\koust\anaconda3\lib\site-packages\certifi\cacert.pem
+2022-09-12 23:05:50,030 Starting new HTTPS connection (1): yt-vdo-uploaded.s3.us-west-2.amazonaws.com:443
+2022-09-12 23:05:51,181 Waiting for 100 Continue response.
+2022-09-12 23:05:51,508 Received a non 100 Continue response from the server, NOT sending request body.
+2022-09-12 23:05:51,508 https://yt-vdo-uploaded.s3.us-west-2.amazonaws.com:443 "PUT /vdo1.3gpp HTTP/1.1" 301 None
+2022-09-12 23:05:51,508 Response headers: {'x-amz-bucket-region': 'us-east-1', 'x-amz-request-id': 'QMP00WQFG0MBFWJA', 'x-amz-id-2': 'cLndHRRn7l/zqff7OphoPLepw8Czt9CPlrs6T//tfMWyqehq6Qz7Ijq+FfjL+27RVWL6haLW1oI=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 12 Sep 2022 17:35:50 GMT', 'Server': 'AmazonS3', 'Connection': 'close'}
+2022-09-12 23:05:51,508 Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>PermanentRedirect</Code><Message>The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint.</Message><Endpoint>s3.amazonaws.com</Endpoint><Bucket>yt-vdo-uploaded</Bucket><RequestId>QMP00WQFG0MBFWJA</RequestId><HostId>cLndHRRn7l/zqff7OphoPLepw8Czt9CPlrs6T//tfMWyqehq6Qz7Ijq+FfjL+27RVWL6haLW1oI=</HostId></Error>'
+2022-09-12 23:05:51,524 Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002DEB592B760>
+2022-09-12 23:05:51,524 No retry needed.
+2022-09-12 23:05:51,524 Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000002DEB592B820>>
+2022-09-12 23:05:51,524 S3 client configured for region us-west-2 but the bucket yt-vdo-uploaded is in region us-east-1; Please configure the proper region to avoid multiple unnecessary redirects and signing attempts.
+2022-09-12 23:05:51,524 Updating URI from https://s3.us-west-2.amazonaws.com/yt-vdo-uploaded/vdo1.3gpp to https://s3.us-east-1.amazonaws.com/yt-vdo-uploaded/vdo1.3gpp
+2022-09-12 23:05:51,524 Response received to retry, sleeping for 0 seconds
+2022-09-12 23:05:51,524 Rewinding stream: <s3transfer.utils.ReadFileChunk object at 0x000002DEB595E850>
+2022-09-12 23:05:51,524 Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000002DEB58B28B0>
+2022-09-12 23:05:51,524 Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002DEB58103A0>>
+2022-09-12 23:05:51,524 Event choose-signer.s3.PutObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000002DEB592B910>>
+2022-09-12 23:05:51,524 Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002DEB535EC70>>
+2022-09-12 23:05:51,524 Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000002DEB4E60940>
+2022-09-12 23:05:51,540 Event before-sign.s3.PutObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000002DEB592B910>>
+2022-09-12 23:05:51,540 Checking for DNS compatible bucket for: https://s3.us-east-1.amazonaws.com/yt-vdo-uploaded/vdo1.3gpp
+2022-09-12 23:05:51,540 URI updated to: https://yt-vdo-uploaded.s3.us-east-1.amazonaws.com/vdo1.3gpp
+2022-09-12 23:05:51,540 Calculating signature using v4 auth.
+2022-09-12 23:05:51,540 CanonicalRequest:
+PUT
+/vdo1.3gpp
+
+content-md5:wPVHJiuv06HdvV5e0o85fg==
+host:yt-vdo-uploaded.s3.us-east-1.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20220912T173551Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+2022-09-12 23:05:51,540 StringToSign:
+AWS4-HMAC-SHA256
+20220912T173551Z
+20220912/us-east-1/s3/aws4_request
+668740cb2771309bc0b3c347032099d8abb9c26de821091c84929a6bc8b1e1c9
+2022-09-12 23:05:51,540 Signature:
+f40930760fd067ad056e519bbd22c16efe70c28d0466225f30129c3cdef01147
+2022-09-12 23:05:51,540 Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000002DEB58B2940>
+2022-09-12 23:05:51,540 Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000002DEB4E669D0>
+2022-09-12 23:05:51,540 Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://yt-vdo-uploaded.s3.us-east-1.amazonaws.com/vdo1.3gpp, headers={'User-Agent': b'Boto3/1.21.32 Python/3.9.12 Windows/10 Botocore/1.27.68', 'Content-MD5': b'wPVHJiuv06HdvV5e0o85fg==', 'Expect': b'100-continue', 'X-Amz-Date': b'20220912T173551Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWSUI6VONAYACYGXL/20220912/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=f40930760fd067ad056e519bbd22c16efe70c28d0466225f30129c3cdef01147', 'amz-sdk-invocation-id': b'8cd1187a-6b9e-4bbd-985a-b1160a62ebeb', 'amz-sdk-request': b'ttl=20220912T173650Z; attempt=2; max=5', 'Content-Length': '3481099'}>
+2022-09-12 23:05:51,540 Certificate path: C:\Users\koust\anaconda3\lib\site-packages\certifi\cacert.pem
+2022-09-12 23:05:51,540 Starting new HTTPS connection (1): yt-vdo-uploaded.s3.us-east-1.amazonaws.com:443
+2022-09-12 23:05:52,368 Waiting for 100 Continue response.
+2022-09-12 23:05:52,619 100 Continue response seen, now sending request body.
+2022-09-12 23:06:05,806 https://yt-vdo-uploaded.s3.us-east-1.amazonaws.com:443 "PUT /vdo1.3gpp HTTP/1.1" 200 0
+2022-09-12 23:06:05,806 Response headers: {'x-amz-id-2': 'wkgf/xmkB3wjcy0jEgDcHebzRb6aTWjPy45jcURJdz+i0xu3DWgr4ecPzFgejX4qc9CXCDC6EU8=', 'x-amz-request-id': 'T7BN8AQH8GA296A6', 'Date': 'Mon, 12 Sep 2022 17:35:53 GMT', 'ETag': '"c0f547262bafd3a1ddbd5e5ed28f397e"', 'Server': 'AmazonS3', 'Content-Length': '0'}
+2022-09-12 23:06:05,806 Response body:
+b''
+2022-09-12 23:06:05,806 Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002DEB592B760>
+2022-09-12 23:06:05,806 No retry needed.
+2022-09-12 23:06:05,806 Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000002DEB592B820>>
+2022-09-12 23:06:05,806 S3 request was previously redirected, not redirecting.
+2022-09-12 23:06:05,806 Releasing acquire 0/None
+2022-09-12 23:06:05,806 uploaded to AWS Successful
+2022-09-12 23:06:05,822 127.0.0.1 - - [12/Sep/2022 23:06:05] "[37mPOST /upload_vdo_toS3 HTTP/1.1[0m" 201 -

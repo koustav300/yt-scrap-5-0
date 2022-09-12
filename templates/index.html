@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YT Scrap</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- jquery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -75,8 +75,9 @@
 
                 <div id="action_btn_container" style="display: flex;">
                     <div>Select your actions</div>
-                    <button id="btn1"> fetch data from db </button>
                     <button id="btn2">  refresh data in db</button>
+
+                    <button id="btn1"> fetch data from db </button>
                     <button id="btn3"> download videos in sytem</button>
                     <button id="btn4"> upload videos in ASW-S3 </button>
                     <a class="btn btn-danger" style="margin-left: 15px" href="{{url_for('download_logFile')}}">Log info </a>
@@ -270,7 +271,7 @@
                  type: 'GET',  // http method
                 data: { 'channel_name':'dummy_path' },  // data to submit
                 success: function (data, status, xhr) {
-
+                        alert('done')
                 },
                 error: function (jqXhr, textStatus, errorMessage) {
                         document.getElementById("waitingModal").style.visibility = "hidden";
@@ -305,8 +306,8 @@
                 }
 
                 document.getElementById('fileLoad_modal').classList.add('displayNone')
-                document.getElementById("waitingModal").style.visibility = "hidden";
-
+                document.getElementById("waitingModal").style.visibility = "visible";
+                console.log('here')
                 $.ajax({
                     url: '/upload_vdo_toS3', // point to server-side URL
                     dataType: 'json', // what to expect back from server
@@ -315,7 +316,7 @@
                     processData: false,
                     data: form_data,
                     type: 'post',
-                    success: function (response) { // display success response
+                    success: function (data, status, xhr) { // display success response
 
                         document.getElementById("waitingModal").style.visibility = "hidden";
 
