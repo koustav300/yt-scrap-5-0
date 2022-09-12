@@ -1,6 +1,7 @@
 import json
 
 from flask import Flask, request, render_template, jsonify, send_file, send_from_directory
+from flask_cors import CORS,cross_origin
 from pytube import YouTube
 from pytube import Channel
 from other_functions import UDF_func as udf, UDF_connections as con, oops_file as oops
