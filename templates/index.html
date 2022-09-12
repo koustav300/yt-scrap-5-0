@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--   ---------------- bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--    ------------------------------------------------------------>
+
+</head>
+<body>
+    <div id='fileLoad_modal' class="popup_modal displayNone">
+        <h5>Select files and click upload to load files</h5>
+        <p id="msg"></p>
+        <input type="file" id="multiFiles" name="files[]" multiple="multiple"/>
+        <button id="upload">Upload</button>
+    </div>
+
+    <div id="downloadLink" class="popup_modal displayNone">
+        <h5>Files are downloded from youtube. Hit download to get the zip file of the videos</h5>
+        <a class="btn btn-success" href="{{url_for('download')}}">Download</a>
+        <button class="btn" id="cls_btn_vdos" > Close </button>
+    </div>
+
+     <div id="download_imgLink" class="popup_modal" style="visibility: hidden">
+        <h5>Click on download to get the thumbnail images in your system </h5>
+        <a class="btn btn-success" href="{{url_for('download_imgZip')}}">Download </a>
+        <button class="btn" id="cls_btn_imges"> Close </button>
+    </div>
+    <div id="waitingModal" class="popup_modal" style="visibility: hidden">
+        <div> Wait .... We are working on your request </div>
+        <div> This msg will be closed once finished </div>
+    </div>
+
+    <div id="main_container">
+        <div id="left_main_container"></div>
+
+        <div id="right_main_container">
+            <div id="right_top_container">
+                <div id="chnnl_link_container"> <div> provide the channel link here </div><input id="input_link" type="text"> </div>
+                <div id="link_example_container" class="displayNone"> (Ex:- https://www.youtube.com/user/krishnaik06, https://www.youtube.com/user/krishnaik06/videos )</div>
+
+                <div id="finter_main_container">
+                    <div>Select No of videos
+                        <select name="sl_num_of_videos" id="sl_num_of_videos">
+                            <option value=2>2</option>
+                            <option value=5>5</option>
+                            <option value=10>10</option>
+                            <option value=25>25</option>
+                            <option value=50>50</option>
+                        </select>
+                    </div>
+                    <div>Length of the videos should be less than
+                        <select name="sl_vdo_length" id="sl_vdo_length">
+                            <option value=5>5 min</option>
+                            <option value=15>15 min</option>
+                            <option value=30>30 min</option>
+                            <option value=60>1 hour</option>
+                            <option value=300>5 hours</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div id="action_btn_container" style="display: flex;">
+                    <div>Select your actions</div>
+                    <button id="btn1"> fetch data from db </button>
+                    <button id="btn2">  refresh data in db</button>
+                    <button id="btn3"> download videos in sytem</button>
+                    <button id="btn4"> upload videos in ASW-S3 </button>
+                    <a class="btn btn-danger" style="margin-left: 15px" href="{{url_for('download_logFile')}}">Log info </a>
+                </div>
+            </div>
+            <div id="right_bottom_container">
+                <div id="content_btn_container">
+                    <button id="Shw_vdoDetails">Show video info</button>
+                    <button id="shw_commentDetails">Show comment info</button>
+                </div>
+                <div id="basic_info_container">
+                    <table id='tbl_details' class='table table-striped'>
+                        <thead>
+                            <tr><th>Video Id</th>
+                                <th>Video Link</th>
+                                <th>Channel Name</th>
+                                <th>Views</th>
+                                <th>Likes</th>
+                                <th>Comments</th>
+                                <th>Length</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_basicInfo"></tbody>
+                    </table>
+                </div>
+                <div id="comment_details_container" class="displayNone">
+                    <table id='tbl_comment_details' class='table table-hover table-dark'>
+                        <thead>
+                            <tr>
+                                <th>Video Id</th>
+                                <th>Commenter</th>
+                                <th>Comment</th>
+                                <th>Category</th>
+                                <th>Replier</th>
+                                <th>Reply</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_commentInfo"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn1 = document.getElementById('btn1')
+        btn1.addEventListener('click', function () {
+            fetch_data_fromDb()
+        })
+
+        let btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click', function () {
+            scrapNewData()
+        })
+
+        let btn3 = document.getElementById('btn3')
+        btn3.addEventListener('click', function () {
+            download_vdos()
+        })
+        let btn4 = document.getElementById('btn4')
+        btn4.addEventListener('click', function () {
+           document.getElementById('fileLoad_modal').classList.remove('displayNone')
+        })
+
+        $("#cls_btn_imges").click(function() {
+            closeMsg('download_imgLink')
+        })
+
+        $("#cls_btn_vdos").click(function() {
+            closeMsg('downloadLink')
+        })
+
+        $('#Shw_vdoDetails').on('click', () => {
+            document.getElementById('basic_info_container').classList.remove('displayNone')
+            document.getElementById('tbl_details').classList.remove('displayNone')
+
+            document.getElementById('comment_details_container').classList.add('displayNone')
+            document.getElementById('tbl_comment_details').classList.add('displayNone')
+
+        })
+
+
+        $('#shw_commentDetails').on('click', () => {
+            document.getElementById('basic_info_container').classList.add('displayNone')
+            document.getElementById('tbl_details').classList.add('displayNone')
+
+            document.getElementById('comment_details_container').classList.remove('displayNone')
+            document.getElementById('tbl_comment_details').classList.remove('displayNone')
+
+        })
+
+        //------------------------------------------------------------
+
+        function scrapNewData() {
+            let channel_name = document.getElementById('input_link').value
+            let target_vdo_length = document.getElementById('sl_vdo_length').value
+            let target_num_of_vdos = document.getElementById('sl_num_of_videos').value
+            console.log(channel_name, target_vdo_length, target_num_of_vdos)
+            document.getElementById("waitingModal").style.visibility = "visible";
+
+            $.ajax('/scrap_new_request', {
+                 type: 'GET',  // http method
+                data: { 'channel_name':channel_name, 'target_length': target_vdo_length,
+                     'target_nunOf_vdos':target_num_of_vdos },  // data to submit
+
+                success: function (data, status, xhr) {
+                    document.getElementById("waitingModal").style.visibility = "hidden";
+                    if( data['status'] == -1){
+                        alert(data['errorMassage'])
+                        return
+                    }
+
+                    alert('Data is refreshed now in db')
+                },
+                error: function (request, textStatus, message) {
+
+                       alert(message)
+                       document.getElementById("waitingModal").style.visibility = "hidden";
+                }
+            });
+        }
+
+        function fetch_data_fromDb() {
+            let channel_name = document.getElementById('input_link').value
+            document.getElementById("waitingModal").style.visibility = "visible";
+            $.ajax('/fetch_dataFromDb', {
+                 type: 'GET',  // http method
+                data: { 'channel_name':channel_name},  // data to submit
+
+                success: function (data, status, xhr) {
+                    document.getElementById("waitingModal").style.visibility = "hidden";
+                    if( data['status'] == -1){
+                        alert(data['errorMassage'])
+                        return
+                    }
+                    console.log('data has come')
+                    let basic_info = data['basic_info']
+                    let cmmnt_info = data['comment_info']
+                    document.getElementById('tbody_basicInfo').innerHTML ="";
+                    document.getElementById('tbody_basicInfo').innerHTML =basic_info;
+                    document.getElementById('tbody_commentInfo').innerHTML ="";
+                    document.getElementById('tbody_commentInfo').innerHTML =cmmnt_info;
+                    document.getElementById("download_imgLink").style.visibility = "visible";
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                        // document.getElementById('right_bottom_container').innerHTML ="";
+                        // $('right_bottom_container').append('Error' + errorMessage);
+                        document.getElementById("waitingModal").style.visibility = "hidden";
+                        alert(errorMessage)
+                }
+            });
+        }
+        function download_vdos() {
+            let channel_name = document.getElementById('input_link').value
+            console.log(channel_name)
+            let target_vdo_length = document.getElementById('sl_vdo_length').value
+            let target_num_of_vdos = document.getElementById('sl_num_of_videos').value
+
+            document.getElementById("waitingModal").style.visibility = "visible";
+
+            $.ajax('/testing',
+                {
+                    type: 'GET',  // http method
+                    data: { 'channel_name':channel_name, 'target_length': target_vdo_length,
+                         'target_nunOf_vdos':target_num_of_vdos },  // data to submit
+
+                    success: function (data, status, xhr) {
+                       document.getElementById("waitingModal").style.visibility = "hidden";
+
+                       if( data['status'] == -1){
+                            alert(data['errorMassage'])
+                            return
+                        }
+
+                       document.getElementById('downloadLink').classList.remove('displayNone')
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                        document.getElementById("waitingModal").style.visibility = "hidden";
+                        alert(errorMessage)
+
+                }
+            });
+        }
+
+        function upload_vdos_toAWS() {
+            console.log('hitting')
+            document.getElementById("waitingModal").style.visibility = "visible";
+            $.ajax('/upload_vdo_toS3', {
+                 type: 'GET',  // http method
+                data: { 'channel_name':'dummy_path' },  // data to submit
+                success: function (data, status, xhr) {
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                        document.getElementById("waitingModal").style.visibility = "hidden";
+                        console.log(errorMessage)
+                        alert(errorMessage)
+                }
+            });
+        }
+
+        //--------------------------------------------------------------------------
+        function closeMsg(input_msgBox_id){
+            console.log(input_msgBox_id)
+            document.getElementById(input_msgBox_id).style.visibility = "hidden";
+        }
+
+    </script>
+
+    <script type="text/javascript">
+    // Upload file function
+        $(document).ready(function (e) {
+            $('#upload').on('click', function () {
+                var form_data = new FormData();
+                var ins = document.getElementById('multiFiles').files.length;
+
+                if(ins == 0) {
+                    $('#msg').html('<span style="color:red">Select at least one file</span>');
+                    return;
+                }
+
+                for (var x = 0; x < ins; x++) {
+                    form_data.append("files[]", document.getElementById('multiFiles').files[x]);
+                }
+
+                document.getElementById('fileLoad_modal').classList.add('displayNone')
+                document.getElementById("waitingModal").style.visibility = "hidden";
+
+                $.ajax({
+                    url: '/upload_vdo_toS3', // point to server-side URL
+                    dataType: 'json', // what to expect back from server
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: form_data,
+                    type: 'post',
+                    success: function (response) { // display success response
+
+                        document.getElementById("waitingModal").style.visibility = "hidden";
+
+                        if( data['status'] == -1){
+                            alert(data['errorMassage'])
+                            return
+                        }
+
+                        alert('Video is loaded in AWS-S3')
+                        console.log('vdo working')
+
+                    },
+                    error: function (response) {
+                        alert(response.message); // display error response
+                        document.getElementById("waitingModal").style.visibility = "hidden";
+
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

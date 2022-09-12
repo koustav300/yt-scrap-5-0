@@ -1,0 +1,92 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100vw;
+    position: relative;
+}
+.popup_modal{
+            position: fixed;
+            left: 23vw;
+            top: 40vh;
+            height: 30vh;
+            width: 56vw;
+            background-color: #379bc4;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 5%;
+}
+#fileLoad_modal{
+    position: fixed;
+    left: 23vw;
+    top: 40vh;
+    height: 30vh;
+    width: 56vw;
+    background-color: #379bc4;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5%;
+}
+.displayNone{
+    display: none !important;
+}
+#main_container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 18vw 82vw;
+    grid-template-columns: 15vw 82vw;
+    background-color: #128ec1
+}
+    #left_main_container{
+        /* background-color: whitesmoke; */
+    }
+    #right_main_container{
+        width: 82vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 30vh 70vh;
+    }
+        #right_top_container{
+            /* background-color: whitesmoke; */
+            color: aliceblue;
+        }
+            #input_link{
+                width: 40vw;
+            }
+            #link_example_container{
+                margin-bottom: 1.5vh;
+                margin-top: 0.5vh;
+            }
+            #chnnl_link_container div{
+                margin-top: 1.5vh;
+            }
+
+            #finter_main_container{
+                margin: 5vh 0% 1vh;
+                display: grid;
+                grid-template-columns: 30% 70%;
+            }
+
+            #btn1, #btn2, #btn3, #btn4{
+                margin-left: 0.5vw;
+                color: #635f5f;
+            }
+            #input_link, #sl_num_of_videos, #sl_vdo_length{
+                color: #635f5f;
+            }
+        #right_bottom_container{
+            height: 65vh;
+            width: 94vw;
+            background-color: aliceblue;
+            margin-left: -12vw;
+            overflow: auto;
+            border-radius: 5px;
+            font-size: small;
+        }
+        .td_thumbnail img{
+            height: 40px;
+            width: 40px;
+        }
+        #content_btn_container{
+            margin: 5px;
+        }
