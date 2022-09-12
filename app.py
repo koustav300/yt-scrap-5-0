@@ -237,8 +237,7 @@ def fetchDataFromDb():
 
     # step --4 creating download zip
     try:
-        ROOT_DIR =os.getcwd()
-        IMAGE_FOLDER = os.path.join(ROOT_DIR, 'static', 'images')
+        IMAGE_FOLDER = os.path.join('static', 'images')
         app.config['IMAGE_FOLDER'] = IMAGE_FOLDER
 
         # ------------creating the Zip
@@ -256,7 +255,7 @@ def fetchDataFromDb():
 
             # img content
             img = requests.get(img_url).content
-
+            print(img)
             # image file write & close
 
             fileName= 'image' + vdo_id + '.jpg'
@@ -270,7 +269,7 @@ def fetchDataFromDb():
             zipfolder.write(os.path.join(app.config['IMAGE_FOLDER'], fileName))
             print('zip written')
             # removing the file
-            os.remove(os.path.join(app.config['IMAGE_FOLDER'], fileName))
+            # os.remove(os.path.join(app.config['IMAGE_FOLDER'], fileName))
         zipfolder.close()
         logger.debug('zipfolder created')
         print('zip created')
