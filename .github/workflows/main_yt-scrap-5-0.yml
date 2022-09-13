@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'yt-scrap-5-0'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9FD94D23C9EA4AA69CF6B3ADD0779822 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_54B04DF011B5408BB008CB9F9C5E1E6B }}
