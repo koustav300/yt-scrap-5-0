@@ -167,3 +167,16 @@ def getting_aws_credentials():
             pass
 
     return secret
+
+    def upload_to_aws(local_file, bucket, s3_file):
+        try:
+            s3.upload_file(local_file, bucket, s3_file)
+            logger.debug('uploaded to AWS Successful')
+            os.remove(filename)
+            return 'uploaded to AWS Successful'
+        except FileNotFoundError:
+            logger.error("The file was not found")
+            return False
+        except NoCredentialsError:
+            logger.error("Credentials not available")
+            return False

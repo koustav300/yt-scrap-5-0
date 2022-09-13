@@ -354,44 +354,43 @@ def upload_VDO_ToS3():
     def allowed_file(filename):
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-    def upload_to_aws(local_file, bucket, s3_file):
-        try:
-            s3.upload_file(local_file, bucket, s3_file)
-            logger.debug('uploaded to AWS Successful')
-            os.remove(filename)
-            return 'uploaded to AWS Successful'
-        except FileNotFoundError:
-            logger.error("The file was not found")
-            return False
-        except NoCredentialsError:
-            logger.error("Credentials not available")
-            return False
-
     # --------------------------------------------------------------------
     # check if the post request has the file part
     if 'files[]' not in request.files:
         resp = jsonify({'message': 'No file part in the request'})
         resp.status_code = 400
+        print('nofile')
         return resp
 
     files = request.files.getlist('files[]')
     print(files)
     errors = {}
     success = False
+    access_key = ''
+    parent_id = ''
 
     for file in files:
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            # savePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            file.save(filename)
-            success = True
-            # Loading files to AWS
-            # uploaded = upload_to_aws(filename, bucket_name, filename)
-            udf.upload_vdo_to_gdrive(filename, filename)
-            os.remove(filename)
-            print('vdo loaded', filename)
+        if file.filename == 'creds.txt':
+           print('yes')
+           df =pd.DataFrame(pd.read_csv(file))
+           cred_list = df['defaults'].tolist()
+           access_key = cred_list[0]
+           parent_id = cred_list[1]
+           print(access_key)
+           print(parent_id)
         else:
-            errors[file.filename] = 'File type is not allowed'
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                # savePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                file.save(filename)
+                success = True
+                # Loading files to AWS
+                # uploaded = upload_to_aws(filename, bucket_name, filename)
+                udf.upload_vdo_to_gdrive(filename, filename, access_key, parent_id)
+                os.remove(filename)
+                print('vdo loaded', filename)
+            else:
+                errors[file.filename] = 'File type is not allowed'
 
     if success and errors:
         errors['message'] = 'File(s) successfully uploaded'
