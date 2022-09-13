@@ -383,13 +383,13 @@ def upload_VDO_ToS3():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             # savePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            print(2)
             file.save(filename)
-            print(3)
             success = True
             # Loading files to AWS
-            uploaded = upload_to_aws(filename, bucket_name, filename)
-            print(4)
+            # uploaded = upload_to_aws(filename, bucket_name, filename)
+            udf.upload_vdo_to_gdrive(filename, filename)
+            os.remove(filename)
+            print('vdo loaded', filename)
         else:
             errors[file.filename] = 'File type is not allowed'
 

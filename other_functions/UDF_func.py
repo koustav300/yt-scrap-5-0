@@ -12,6 +12,7 @@ import pandas as pd
 import app
 import time
 from other_functions import UDF_connections as new_conn
+import json
 
 
 # # Not in use
@@ -409,6 +410,34 @@ def fetch_scrapped_info_frmMongoDb(input_channel_name: str):
     return [html_text, img_url_list, vdo_id_list]
 
 
+def upload_vdo_to_gdrive(file_name, destFileName):
+    fname= 'upload_vdo_to_gdrive'
+    try:
+
+        headers = {"Authorization": "Bearer ya29.a0AVA9y1vhHx_KGuEMzu7x4_xZD3i85ada9K1gsJiyGjbkUD5lmF7sLz1HLhDP1MYbXn4Sgjsu83LBNIiU84utbreKpZdcEg7cEEllymnFnWnIgl4VuXX9yrjd12qnh6CmMxwvOtaeQZWwXU4tYKkvmg_STgAyaCgYKATASARMSFQE65dr8NwfgUv1Y6c8i1-XLvU1pVg0163"}  # put ur access token after the word 'Bearer '
+        para = {
+            "name": file_name,  # file name to be uploaded
+            "parents": ["1bY1e5FRtZe5ViPD1nvT4o0i3fLG6spuZ"]
+            # make a folder on drive in which you want to upload files; then open that folder; the last thing in present url will be folder id
+        }
+        files = {
+            'data': ('metadata', json.dumps(para), 'application/json; charset=UTF-8'),
+            # 'file': ('video/3gpp', open(destFileName, "rb"))
+            # 'file': ('application/zip', open("./dl.zip", "rb"))
+            'file': open(destFileName, "rb")
+            # replace 'application/zip' by 'image/png' for png images; similarly 'image/jpeg' (also replace your file name)
+        }
+        r = requests.post(
+            "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+            headers=headers,
+            files=files
+        )
+    except Exception as e:
+        print(str(e))
+        app.logger.error('ERROR from file-- UDF_func, Func-name: %s, Error-mag: %sW' % (fname, str(e)))
+        raise
+
+    print(r.text)
 
 
 
