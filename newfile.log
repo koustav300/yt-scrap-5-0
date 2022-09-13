@@ -1,36 +1,6 @@
-2022-09-13 15:49:37,506  * Debugger is active!
-2022-09-13 15:49:37,522  * Debugger PIN: 488-624-636
-2022-09-13 15:49:37,584  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2022-09-13 15:49:43,815 127.0.0.1 - - [13/Sep/2022 15:49:43] "[37mGET / HTTP/1.1[0m" 200 -
-2022-09-13 15:49:44,151 127.0.0.1 - - [13/Sep/2022 15:49:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2022-09-13 15:50:14,711 Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
-2022-09-13 15:50:14,711 Changing event name from before-call.apigateway to before-call.api-gateway
-2022-09-13 15:50:14,711 Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
-2022-09-13 15:50:14,711 Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
-2022-09-13 15:50:14,711 Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
-2022-09-13 15:50:14,727 Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
-2022-09-13 15:50:14,727 Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
-2022-09-13 15:50:14,727 Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
-2022-09-13 15:50:14,727 Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
-2022-09-13 15:50:14,727 Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
-2022-09-13 15:50:14,727 Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
-2022-09-13 15:50:14,742 IMDS ENDPOINT: http://169.254.169.254/
-2022-09-13 15:50:14,742 Looking for credentials via: env
-2022-09-13 15:50:14,742 Looking for credentials via: assume-role
-2022-09-13 15:50:14,742 Looking for credentials via: assume-role-with-web-identity
-2022-09-13 15:50:14,742 Looking for credentials via: sso
-2022-09-13 15:50:14,742 Looking for credentials via: shared-credentials-file
-2022-09-13 15:50:14,742 Found credentials in shared credentials file: ~/.aws/credentials
-2022-09-13 15:50:14,742 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\endpoints.json
-2022-09-13 15:50:14,828 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\sdk-default-configuration.json
-2022-09-13 15:50:14,828 Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000029F48889310>
-2022-09-13 15:50:15,157 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\s3\2006-03-01\service-2.json
-2022-09-13 15:50:15,188 Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x0000029F4880BE50>
-2022-09-13 15:50:15,188 Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x0000029F48C98DC0>
-2022-09-13 15:50:15,266 Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x0000029F4880BC10>
-2022-09-13 15:50:15,266 Setting s3 timeout as (60, 60)
-2022-09-13 15:50:15,266 Loading JSON file: C:\Users\koust\AppData\Roaming\Python\Python39\site-packages\botocore\data\_retry.json
-2022-09-13 15:50:15,266 Registering retry handlers for service: s3
-2022-09-13 15:50:15,579 Starting new HTTPS connection (1): www.googleapis.com:443
-2022-09-13 15:50:19,167 https://www.googleapis.com:443 "POST /upload/drive/v3/files?uploadType=multipart HTTP/1.1" 200 118
-2022-09-13 15:50:19,231 127.0.0.1 - - [13/Sep/2022 15:50:19] "[37mPOST /upload_vdo_toS3 HTTP/1.1[0m" 201 -
+2022-09-13 15:58:46,468  * Debugger is active!
+2022-09-13 15:58:46,484  * Debugger PIN: 488-624-636
+2022-09-13 15:58:46,572  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-09-13 15:58:47,477 127.0.0.1 - - [13/Sep/2022 15:58:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-09-13 15:59:54,151 127.0.0.1 - - [13/Sep/2022 15:59:54] "[37mGET / HTTP/1.1[0m" 200 -
+2022-09-13 15:59:54,198 127.0.0.1 - - [13/Sep/2022 15:59:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

@@ -304,8 +304,6 @@
                 for (var x = 0; x < ins; x++) {
                     form_data.append("files[]", document.getElementById('multiFiles').files[x]);
                 }
-                accessKey = document.getElementById('input_access_key').value
-                parentId = document.getElementById('input_parent_id').value
 
                 document.getElementById('fileLoad_modal').classList.add('displayNone')
                 document.getElementById("waitingModal").style.visibility = "visible";
